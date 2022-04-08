@@ -1,0 +1,618 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>一致性哈希 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="长轮询与WebSockets与服务器发送事件.html" />
+    
+    
+    <link rel="prev" href="CAP定理.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="负载均衡.html">
+            
+                <a href="负载均衡.html">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="负载均衡.html">
+            
+                <a href="负载均衡.html#智能客户端">
+            
+                    
+                    智能客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="负载均衡.html">
+            
+                <a href="负载均衡.html#硬件负载均衡器">
+            
+                    
+                    硬件负载均衡器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="负载均衡.html">
+            
+                <a href="负载均衡.html#软件负载均衡">
+            
+                    
+                    软件负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="缓存.html">
+            
+                <a href="缓存.html">
+            
+                    
+                    缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="分片或数据分区.html">
+            
+                <a href="分片或数据分区.html">
+            
+                    
+                    分片或数据分区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="索引.html">
+            
+                <a href="索引.html">
+            
+                    
+                    索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="代理.html">
+            
+                <a href="代理.html">
+            
+                    
+                    代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="队列.html">
+            
+                <a href="队列.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="冗余与复制.html">
+            
+                <a href="冗余与复制.html">
+            
+                    
+                    冗余与复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="SQL与NoSQL.html">
+            
+                <a href="SQL与NoSQL.html">
+            
+                    
+                    SQL与NoSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="CAP定理.html">
+            
+                <a href="CAP定理.html">
+            
+                    
+                    CAP定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="一致性哈希.html">
+            
+                <a href="一致性哈希.html">
+            
+                    
+                    一致性哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="长轮询与WebSockets与服务器发送事件.html">
+            
+                <a href="长轮询与WebSockets与服务器发送事件.html">
+            
+                    
+                    长轮询与WebSockets与服务器发送事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="系统设计演进指南.html">
+            
+                <a href="系统设计演进指南.html">
+            
+                    
+                    系统设计演进指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="设计像TinyURL这样的短URL服务.html">
+            
+                <a href="设计像TinyURL这样的短URL服务.html">
+            
+                    
+                    设计像TinyURL这样的短URL服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="设计Instagram.html">
+            
+                <a href="设计Instagram.html">
+            
+                    
+                    设计Instagram
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="设计Dropbox.html">
+            
+                <a href="设计Dropbox.html">
+            
+                    
+                    设计Dropbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="设计FackbookMessager.html">
+            
+                <a href="设计FackbookMessager.html">
+            
+                    
+                    设计FackbookMessager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="设计Twitter.html">
+            
+                <a href="设计Twitter.html">
+            
+                    
+                    设计Twitter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="设计Youtube或Netflix.html">
+            
+                <a href="设计Youtube或Netflix.html">
+            
+                    
+                    设计Youtube或Netflix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="设计Twitter搜索.html">
+            
+                <a href="设计Twitter搜索.html">
+            
+                    
+                    设计Twitter搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="设计一个Web爬虫.html">
+            
+                <a href="设计一个Web爬虫.html">
+            
+                    
+                    设计一个Web爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="设计Facebook的新闻流.html">
+            
+                <a href="设计Facebook的新闻流.html">
+            
+                    
+                    设计Facebook的新闻流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="设计Yelp或附近的朋友.html">
+            
+                <a href="设计Yelp或附近的朋友.html">
+            
+                    
+                    设计Yelp或附近的朋友
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="设计Uber后端.html">
+            
+                <a href="设计Uber后端.html">
+            
+                    
+                    设计Uber后端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="设计BookMyShow.html">
+            
+                <a href="设计BookMyShow.html">
+            
+                    
+                    设计BookMyShow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >一致性哈希</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E00;&#x81F4;&#x6027;&#x54C8;&#x5E0C;">&#x4E00;&#x81F4;&#x6027;&#x54C8;&#x5E0C;</h1>
+<p>&#x5206;&#x5E03;&#x5F0F;&#x54C8;&#x5E0C;&#x8868;(Distributed Hash Table, DHT)&#x662F;&#x5206;&#x5E03;&#x5F0F;&#x53EF;&#x4F38;&#x7F29;&#x7CFB;&#x7EDF;&#x7684;&#x57FA;&#x672C;&#x7EC4;&#x4EF6;&#x4E4B;&#x4E00;&#x3002;&#x54C8;&#x5E0C;&#x8868;&#x9700;&#x8981;&#x952E;&#x3001;&#x503C;&#x548C;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#xFF0C;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x5C06;&#x952E;&#x6620;&#x5C04;&#x5230;&#x5B58;&#x50A8;&#x503C;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>index = hash_function(key)</p>
+<p>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x8BBE;&#x8BA1;&#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x7F13;&#x5B58;&#x7CFB;&#x7EDF;&#x3002;&#x7ED9;&#x5B9A;&apos; n &apos;&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x76F4;&#x89C2;&#x7684;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x5C06;&#x662F;&apos; key % n &apos;&#x3002;&#x5B83;&#x7B80;&#x5355;&#x800C;&#x5E38;&#x7528;&#x3002;&#x4F46;&#x5B83;&#x6709;&#x4E24;&#x4E2A;&#x4E3B;&#x8981;&#x7F3A;&#x70B9;:</p>
+<p>1.&#x5B83;&#x4E0D;&#x662F;&#x6C34;&#x5E73;&#x4F38;&#x7F29;&#x7684;&#x3002;&#x6BCF;&#x5F53;&#x5411;&#x7CFB;&#x7EDF;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7F13;&#x5B58;&#x4E3B;&#x673A;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x73B0;&#x6709;&#x7684;&#x6620;&#x5C04;&#x90FD;&#x4F1A;&#x88AB;&#x7834;&#x574F;&#x3002;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x7CFB;&#x7EDF;&#x5305;&#x542B;&#x5927;&#x91CF;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x5C06;&#x662F;&#x7EF4;&#x62A4;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x75DB;&#x70B9;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5F88;&#x96BE;&#x5B89;&#x6392;&#x505C;&#x673A;&#x65F6;&#x95F4;&#x6765;&#x66F4;&#x65B0;&#x6240;&#x6709;&#x7F13;&#x5B58;&#x6620;&#x5C04;&#x3002;</p>
+<p>2.&#x5B83;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7684;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5BF9;&#x4E8E;&#x975E;&#x5747;&#x5300;&#x5206;&#x5E03;&#x7684;&#x6570;&#x636E;&#x3002;&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x5047;&#x8BBE;&#x6570;&#x636E;&#x4E0D;&#x662F;&#x5747;&#x5300;&#x5206;&#x5E03;&#x7684;&#x3002;&#x5BF9;&#x4E8E;&#x7F13;&#x5B58;&#x7CFB;&#x7EDF;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4E00;&#x4E9B;&#x7F13;&#x5B58;&#x53D8;&#x5F97;&#x70ED;&#x4E14;&#x9971;&#x548C;&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x7F13;&#x5B58;&#x5219;&#x95F2;&#x7F6E;&#x4E14;&#x51E0;&#x4E4E;&#x4E3A;&#x7A7A;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x81F4;&#x7684;&#x54C8;&#x5E0C;&#x662F;&#x6539;&#x8FDB;&#x7F13;&#x5B58;&#x7CFB;&#x7EDF;&#x7684;&#x597D;&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;&#x4E00;&#x81F4;&#x54C8;&#x5E0C;">&#x4EC0;&#x4E48;&#x662F;&#x4E00;&#x81F4;&#x54C8;&#x5E0C;?</h2>
+<p>&#x5BF9;&#x4E8E;&#x5206;&#x5E03;&#x5F0F;&#x7F13;&#x5B58;&#x7CFB;&#x7EDF;&#x548C;dht&#xFF0C;&#x4E00;&#x81F4;&#x54C8;&#x5E0C;&#x662F;&#x4E00;&#x79CD;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#x7B56;&#x7565;&#x3002;&#x5B83;&#x5141;&#x8BB8;&#x4EE5;&#x8FD9;&#x6837;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x5206;&#x5E03;&#x6570;&#x636E;&#xFF0C;&#x4ECE;&#x800C;&#x5C06;&#x6DFB;&#x52A0;&#x6216;&#x5220;&#x9664;&#x8282;&#x70B9;&#x65F6;&#x7684;&#x91CD;&#x7EC4;&#x6700;&#x5C0F;&#x5316;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8BA9;&#x7F13;&#x5B58;&#x7CFB;&#x7EDF;&#x66F4;&#x5BB9;&#x6613;&#x6269;&#x5C55;&#x6216;&#x7F29;&#x5C0F;&#x3002;</p>
+<p>&#x5728;&#x4E00;&#x81F4;&#x54C8;&#x5E0C;&#x4E2D;&#xFF0C;&#x5F53;&#x54C8;&#x5E0C;&#x8868;&#x7684;&#x5927;&#x5C0F;&#x88AB;&#x8C03;&#x6574;&#x65F6;(&#x4F8B;&#x5982;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7F13;&#x5B58;&#x4E3B;&#x673A;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x7CFB;&#x7EDF;&#x4E2D;)&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x6620;&#x5C04;kn&#x952E;&#xFF0C;&#x5176;&#x4E2D;k&#x662F;&#x952E;&#x7684;&#x603B;&#x6570;&#xFF0C;n&#x662F;&#x670D;&#x52A1;&#x5668;&#x7684;&#x603B;&#x6570;&#x3002;&#x56DE;&#x60F3;&#x4E00;&#x4E0B;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x201C;mod&#x201D;&#x4F5C;&#x4E3A;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x7684;&#x7F13;&#x5B58;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x952E;&#x90FD;&#x9700;&#x8981;&#x88AB;&#x6620;&#x5C04;&#x3002;</p>
+<p>&#x5728;&#x4E00;&#x81F4;&#x7684;&#x54C8;&#x5E0C;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x53EF;&#x80FD;&#xFF0C;&#x5C06;&#x5BF9;&#x8C61;&#x6620;&#x5C04;&#x5230;&#x76F8;&#x540C;&#x7684;&#x4E3B;&#x673A;&#x3002;&#x5F53;&#x4E3B;&#x673A;&#x4ECE;&#x7CFB;&#x7EDF;&#x4E2D;&#x79FB;&#x9664;&#x65F6;&#xFF0C;&#x8BE5;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x5BF9;&#x8C61;&#x5C06;&#x88AB;&#x5176;&#x4ED6;&#x4E3B;&#x673A;&#x5171;&#x4EAB;;&#x5F53;&#x4E00;&#x4E2A;&#x65B0;&#x4E3B;&#x673A;&#x88AB;&#x6DFB;&#x52A0;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x4ECE;&#x51E0;&#x4E2A;&#x4E3B;&#x673A;&#x4E2D;&#x83B7;&#x53D6;&#x5B83;&#x7684;&#x4EFD;&#x989D;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x89E6;&#x53CA;&#x5176;&#x4ED6;&#x4E3B;&#x673A;&#x7684;&#x4EFD;&#x989D;&#x3002;</p>
+<h2 id="&#x5B83;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;">&#x5B83;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;?</h2>
+<p>&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#xFF0C;&#x4E00;&#x81F4;&#x7684;&#x54C8;&#x5E0C;&#x5C06;&#x4E00;&#x4E2A;&#x952E;&#x6620;&#x5C04;&#x4E3A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x3002;&#x5047;&#x8BBE;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x7684;&#x8F93;&#x51FA;&#x5728;[0,256]&#x7684;&#x8303;&#x56F4;&#x5185;&#x3002;&#x5047;&#x8BBE;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6574;&#x6570;&#x88AB;&#x653E;&#x7F6E;&#x5728;&#x4E00;&#x4E2A;&#x73AF;&#x4E0A;&#xFF0C;&#x8FD9;&#x6837;&#x503C;&#x5C31;&#x88AB;&#x5305;&#x56F4;&#x8D77;&#x6765;&#x4E86;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x81F4;&#x54C8;&#x5E0C;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;:</p>
+<ol>
+<li>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x7F13;&#x5B58;&#x670D;&#x52A1;&#x5668;&#x5217;&#x8868;&#xFF0C;&#x5C06;&#x5B83;&#x4EEC;&#x6563;&#x5217;&#x4E3A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x6574;&#x6570;&#x3002;</li>
+<li>&#x8981;&#x5C06;&#x5BC6;&#x94A5;&#x6620;&#x5C04;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;<ul>
+<li>&#x5C06;&#x5176;&#x6563;&#x5217;&#x4E3A;&#x5355;&#x4E2A;&#x6574;&#x6570;&#x3002;</li>
+<li>&#x987A;&#x65F6;&#x9488;&#x65B9;&#x5411;&#x79FB;&#x52A8;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x5B83;&#x9047;&#x5230;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7F13;&#x5B58;&#x3002;</li>
+<li>&#x8FD9;&#x4E2A;&#x7F13;&#x5B58;&#x5C31;&#x662F;&#x5305;&#x542B;&#x952E;&#x7684;&#x90A3;&#x4E2A;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x52A8;&#x753B;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;:key1&#x6620;&#x5C04;&#x5230;&#x7F13;&#x5B58;A;key2&#x6620;&#x5C04;&#x5230;&#x7F13;&#x5B58;C&#x3002;</li>
+</ul>
+</li>
+</ol>
+<p>&#x4E3A;&#x4E86;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6BD4;&#x5982;D&#xFF0C;&#x539F;&#x6765;&#x9A7B;&#x7559;&#x5728;C&#x7684;&#x952E;&#x5C06;&#x88AB;&#x62C6;&#x5206;&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x952E;&#x5C06;&#x88AB;&#x79FB;&#x5230;D&#xFF0C;&#x800C;&#x5176;&#x4ED6;&#x952E;&#x5C06;&#x4E0D;&#x4F1A;&#x88AB;&#x89E6;&#x6478;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x79FB;&#x9664;&#x7F13;&#x5B58;&#xFF0C;&#x6216;&#x8005;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x5931;&#x8D25;&#xFF0C;&#x6BD4;&#x5982;a&#xFF0C;&#x6240;&#x6709;&#x539F;&#x6620;&#x5C04;&#x5230;a&#x7684;&#x952E;&#x90FD;&#x5C06;&#x843D;&#x5165;B&#xFF0C;&#x53EA;&#x6709;&#x90A3;&#x4E9B;&#x952E;&#x9700;&#x8981;&#x79FB;&#x52A8;&#x5230;B&#xFF0C;&#x5176;&#x4ED6;&#x952E;&#x4E0D;&#x4F1A;&#x53D7;&#x5230;&#x5F71;&#x54CD;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x8D1F;&#x8F7D;&#x5E73;&#x8861;&#xFF0C;&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x5728;&#x5F00;&#x59CB;&#x65F6;&#x8BA8;&#x8BBA;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x5B9E;&#x9645;&#x6570;&#x636E;&#x57FA;&#x672C;&#x4E0A;&#x662F;&#x968F;&#x673A;&#x5206;&#x5E03;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x5747;&#x5300;&#x7684;&#x3002;&#x5B83;&#x53EF;&#x80FD;&#x4F7F;&#x7F13;&#x5B58;&#x4E0A;&#x7684;&#x952E;&#x4E0D;&#x5E73;&#x8861;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x4E3A;&#x7F13;&#x5B58;&#x6DFB;&#x52A0;&#x4E86;&#x201C;&#x865A;&#x62DF;&#x526F;&#x672C;&#x201D;&#x3002;&#x6211;&#x4EEC;&#x4E0D;&#x662F;&#x5C06;&#x6BCF;&#x4E2A;&#x7F13;&#x5B58;&#x6620;&#x5C04;&#x5230;&#x73AF;&#x4E0A;&#x7684;&#x5355;&#x4E2A;&#x70B9;&#xFF0C;&#x800C;&#x662F;&#x6620;&#x5C04;&#x5230;&#x73AF;&#x4E0A;&#x7684;&#x591A;&#x4E2A;&#x70B9;&#xFF0C;&#x5373;&#x526F;&#x672C;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x6BCF;&#x4E2A;&#x7F13;&#x5B58;&#x90FD;&#x4E0E;&#x73AF;&#x7684;&#x591A;&#x4E2A;&#x90E8;&#x5206;&#x76F8;&#x5173;&#x8054;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x201C;&#x6DF7;&#x5408;&#x5F97;&#x5F88;&#x597D;&#x201D;&#xFF0C;&#x968F;&#x7740;&#x526F;&#x672C;&#x6570;&#x91CF;&#x7684;&#x589E;&#x52A0;&#xFF0C;&#x952E;&#x5C06;&#x66F4;&#x52A0;&#x5E73;&#x8861;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CAP定理.html" class="navigation navigation-prev " aria-label="Previous page: CAP定理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="长轮询与WebSockets与服务器发送事件.html" class="navigation navigation-next " aria-label="Next page: 长轮询与WebSockets与服务器发送事件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"一致性哈希","level":"1.11","depth":1,"next":{"title":"长轮询与WebSockets与服务器发送事件","level":"1.12","depth":1,"path":"长轮询与WebSockets与服务器发送事件.md","ref":"长轮询与WebSockets与服务器发送事件.md","articles":[]},"previous":{"title":"CAP定理","level":"1.10","depth":1,"path":"CAP定理.md","ref":"CAP定理.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"一致性哈希.md","mtime":"2022-04-08T05:36:39.893Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-08T07:03:40.449Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

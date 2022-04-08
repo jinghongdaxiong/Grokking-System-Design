@@ -1,0 +1,599 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>队列 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="冗余与复制.html" />
+    
+    
+    <link rel="prev" href="代理.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="负载均衡.html">
+            
+                <a href="负载均衡.html">
+            
+                    
+                    负载均衡
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="负载均衡.html">
+            
+                <a href="负载均衡.html#智能客户端">
+            
+                    
+                    智能客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="负载均衡.html">
+            
+                <a href="负载均衡.html#硬件负载均衡器">
+            
+                    
+                    硬件负载均衡器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="负载均衡.html">
+            
+                <a href="负载均衡.html#软件负载均衡">
+            
+                    
+                    软件负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="缓存.html">
+            
+                <a href="缓存.html">
+            
+                    
+                    缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="分片或数据分区.html">
+            
+                <a href="分片或数据分区.html">
+            
+                    
+                    分片或数据分区
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="索引.html">
+            
+                <a href="索引.html">
+            
+                    
+                    索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="代理.html">
+            
+                <a href="代理.html">
+            
+                    
+                    代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="队列.html">
+            
+                <a href="队列.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="冗余与复制.html">
+            
+                <a href="冗余与复制.html">
+            
+                    
+                    冗余与复制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="SQL与NoSQL.html">
+            
+                <a href="SQL与NoSQL.html">
+            
+                    
+                    SQL与NoSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="CAP定理.html">
+            
+                <a href="CAP定理.html">
+            
+                    
+                    CAP定理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="一致性哈希.html">
+            
+                <a href="一致性哈希.html">
+            
+                    
+                    一致性哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="长轮询与WebSockets与服务器发送事件.html">
+            
+                <a href="长轮询与WebSockets与服务器发送事件.html">
+            
+                    
+                    长轮询与WebSockets与服务器发送事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="系统设计演进指南.html">
+            
+                <a href="系统设计演进指南.html">
+            
+                    
+                    系统设计演进指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="设计像TinyURL这样的短URL服务.html">
+            
+                <a href="设计像TinyURL这样的短URL服务.html">
+            
+                    
+                    设计像TinyURL这样的短URL服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="设计Instagram.html">
+            
+                <a href="设计Instagram.html">
+            
+                    
+                    设计Instagram
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="设计Dropbox.html">
+            
+                <a href="设计Dropbox.html">
+            
+                    
+                    设计Dropbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="设计FackbookMessager.html">
+            
+                <a href="设计FackbookMessager.html">
+            
+                    
+                    设计FackbookMessager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="设计Twitter.html">
+            
+                <a href="设计Twitter.html">
+            
+                    
+                    设计Twitter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="设计Youtube或Netflix.html">
+            
+                <a href="设计Youtube或Netflix.html">
+            
+                    
+                    设计Youtube或Netflix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="设计Twitter搜索.html">
+            
+                <a href="设计Twitter搜索.html">
+            
+                    
+                    设计Twitter搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="设计一个Web爬虫.html">
+            
+                <a href="设计一个Web爬虫.html">
+            
+                    
+                    设计一个Web爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="设计Facebook的新闻流.html">
+            
+                <a href="设计Facebook的新闻流.html">
+            
+                    
+                    设计Facebook的新闻流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="设计Yelp或附近的朋友.html">
+            
+                <a href="设计Yelp或附近的朋友.html">
+            
+                    
+                    设计Yelp或附近的朋友
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="设计Uber后端.html">
+            
+                <a href="设计Uber后端.html">
+            
+                    
+                    设计Uber后端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="设计BookMyShow.html">
+            
+                <a href="设计BookMyShow.html">
+            
+                    
+                    设计BookMyShow
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >队列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x961F;&#x5217;">&#x961F;&#x5217;</h1>
+<p>&#x961F;&#x5217;&#x7528;&#x4E8E;&#x5728;&#x5927;&#x578B;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E2D;&#x6709;&#x6548;&#x5730;&#x7BA1;&#x7406;&#x8BF7;&#x6C42;&#x3002;&#x5728;&#x5177;&#x6709;&#x6700;&#x5C0F;&#x5904;&#x7406;&#x8D1F;&#x8F7D;&#x548C;&#x8F83;&#x5C0F;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5C0F;&#x578B;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x5199;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x9884;&#x671F;&#x5730;&#x5FEB;;&#x7136;&#x800C;&#xFF0C;&#x5728;&#x66F4;&#x590D;&#x6742;&#x548C;&#x5927;&#x578B;&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x5199;&#x64CD;&#x4F5C;&#x53EF;&#x80FD;&#x4F1A;&#x82B1;&#x8D39;&#x51E0;&#x4E4E;&#x4E0D;&#x786E;&#x5B9A;&#x7684;&#x957F;&#x65F6;&#x95F4;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x5FC5;&#x987B;&#x5199;&#x5165;&#x4E0D;&#x540C;&#x670D;&#x52A1;&#x5668;&#x6216;&#x7D22;&#x5F15;&#x7684;&#x4E0D;&#x540C;&#x4F4D;&#x7F6E;&#xFF0C;&#x6216;&#x8005;&#x7CFB;&#x7EDF;&#x53EF;&#x80FD;&#x53EA;&#x662F;&#x5904;&#x4E8E;&#x9AD8;&#x8D1F;&#x8F7D;&#x72B6;&#x6001;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5355;&#x4E2A;&#x5199;&#x64CD;&#x4F5C;(&#x6216;&#x4EFB;&#x52A1;)&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x5B9E;&#x73B0;&#x9AD8;&#x6027;&#x80FD;&#x548C;&#x53EF;&#x7528;&#x6027;&#x9700;&#x8981;&#x7CFB;&#x7EDF;&#x7684;&#x4E0D;&#x540C;&#x7EC4;&#x4EF6;&#x4EE5;&#x5F02;&#x6B65;&#x65B9;&#x5F0F;&#x5DE5;&#x4F5C;;&#x4E00;&#x79CD;&#x5E38;&#x89C1;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528;&#x961F;&#x5217;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x5728;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x5BA2;&#x6237;&#x673A;&#x90FD;&#x8BF7;&#x6C42;&#x5728;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5904;&#x7406;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x3002;&#x8FD9;&#x4E9B;&#x5BA2;&#x6237;&#x673A;&#x5C06;&#x5404;&#x81EA;&#x7684;&#x8BF7;&#x6C42;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x8BD5;&#x56FE;&#x5C3D;&#x5FEB;&#x5B8C;&#x6210;&#x4EFB;&#x52A1;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x5404;&#x81EA;&#x7684;&#x5BA2;&#x6237;&#x673A;&#x3002;&#x5728;&#x5C0F;&#x578B;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x4F20;&#x5165;&#x8BF7;&#x6C42;&#x7684;&#x901F;&#x5EA6;&#x548C;&#x5B83;&#x4EEC;&#x6765;&#x7684;&#x901F;&#x5EA6;&#x4E00;&#x6837;&#x5FEB;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x5DE5;&#x4F5C;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5F53;&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#x8D85;&#x8FC7;&#x5176;&#x5904;&#x7406;&#x80FD;&#x529B;&#x7684;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A;&#x5BA2;&#x6237;&#x673A;&#x88AB;&#x8FEB;&#x7B49;&#x5F85;&#x5176;&#x4ED6;&#x5BA2;&#x6237;&#x673A;&#x7684;&#x8BF7;&#x6C42;&#x5B8C;&#x6210;&#xFF0C;&#x7136;&#x540E;&#x624D;&#x80FD;&#x751F;&#x6210;&#x54CD;&#x5E94;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x540C;&#x6B65;&#x884C;&#x4E3A;&#x4F1A;&#x4E25;&#x91CD;&#x964D;&#x4F4E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x6027;&#x80FD;;&#x5BA2;&#x6237;&#x673A;&#x88AB;&#x8FEB;&#x7B49;&#x5F85;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x4E0D;&#x505A;&#x4EFB;&#x4F55;&#x5DE5;&#x4F5C;&#xFF0C;&#x76F4;&#x5230;&#x5B83;&#x7684;&#x8BF7;&#x6C42;&#x5F97;&#x5230;&#x54CD;&#x5E94;&#x3002;&#x589E;&#x52A0;&#x989D;&#x5916;&#x7684;&#x670D;&#x52A1;&#x5668;&#x6765;&#x89E3;&#x51B3;&#x9AD8;&#x8D1F;&#x8F7D;&#x4E5F;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;&#x95EE;&#x9898;;&#x5373;&#x4F7F;&#x6709;&#x4E86;&#x6709;&#x6548;&#x7684;&#x8D1F;&#x8F7D;&#x5E73;&#x8861;&#xFF0C;&#x4E5F;&#x5F88;&#x96BE;&#x786E;&#x4FDD;&#x5DE5;&#x4F5C;&#x7684;&#x516C;&#x5E73;&#x548C;&#x5E73;&#x8861;&#x5206;&#x914D;&#xFF0C;&#x4ECE;&#x800C;&#x6700;&#x5927;&#x9650;&#x5EA6;&#x5730;&#x63D0;&#x9AD8;&#x5BA2;&#x6237;&#x7AEF;&#x6027;&#x80FD;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x53EF;&#x7528;&#x6216;&#x5931;&#x8D25;&#xFF0C;&#x90A3;&#x4E48;&#x4E0A;&#x6E38;&#x5BA2;&#x6237;&#x7AEF;&#x4E5F;&#x5C06;&#x5931;&#x8D25;&#x3002;&#x8981;&#x6709;&#x6548;&#x5730;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5BA2;&#x6237;&#x673A;&#x7684;&#x8BF7;&#x6C42;&#x548C;&#x4E3A;&#x5176;&#x670D;&#x52A1;&#x800C;&#x6267;&#x884C;&#x7684;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E4B;&#x95F4;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x3002;</p>
+<p><img src="img_3.png" alt="img_3.png"></p>
+<p>&#x5904;&#x7406;&#x961F;&#x5217;&#x548C;&#x5B83;&#x542C;&#x8D77;&#x6765;&#x4E00;&#x6837;&#x7B80;&#x5355;:&#x6240;&#x6709;&#x4F20;&#x5165;&#x7684;&#x4EFB;&#x52A1;&#x90FD;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x53EA;&#x8981;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;worker&#x6709;&#x80FD;&#x529B;&#x5904;&#x7406;&#xFF0C;&#x5B83;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x961F;&#x5217;&#x4E2D;&#x63D0;&#x53D6;&#x4EFB;&#x52A1;&#x3002;&#x8FD9;&#x4E9B;&#x4EFB;&#x52A1;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7B80;&#x5355;&#x5199;&#x5165;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A;&#x6587;&#x6863;&#x751F;&#x6210;&#x7F29;&#x7565;&#x56FE;&#x9884;&#x89C8;&#x56FE;&#x50CF;&#x8FD9;&#x6837;&#x590D;&#x6742;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<p>&#x961F;&#x5217;&#x662F;&#x5728;&#x5F02;&#x6B65;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#x4E0A;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x5411;&#x961F;&#x5217;&#x63D0;&#x4EA4;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x7ED3;&#x679C;;&#x76F8;&#x53CD;&#xFF0C;&#x5B83;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x786E;&#x8BA4;&#x8BF7;&#x6C42;&#x5DF2;&#x88AB;&#x6B63;&#x786E;&#x63A5;&#x6536;&#x3002;&#x5F53;&#x5BA2;&#x6237;&#x9700;&#x8981;&#x65F6;&#xFF0C;&#x8FD9;&#x79CD;&#x786E;&#x8BA4;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x5DE5;&#x4F5C;&#x7ED3;&#x679C;&#x7684;&#x53C2;&#x8003;&#x3002;&#x961F;&#x5217;&#x5BF9;&#x5355;&#x4E2A;&#x8BF7;&#x6C42;&#x4E2D;&#x53EF;&#x80FD;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x5927;&#x5C0F;&#x548C;&#x961F;&#x5217;&#x4E2D;&#x53EF;&#x80FD;&#x4ECD;&#x672A;&#x5B8C;&#x6210;&#x7684;&#x8BF7;&#x6C42;&#x6570;&#x91CF;&#x6709;&#x9690;&#x5F0F;&#x6216;&#x663E;&#x5F0F;&#x7684;&#x9650;&#x5236;&#x3002;</p>
+<p>&#x961F;&#x5217;&#x8FD8;&#x7528;&#x4E8E;&#x5BB9;&#x9519;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;&#x670D;&#x52A1;&#x4E2D;&#x65AD;&#x548C;&#x6545;&#x969C;&#x63D0;&#x4F9B;&#x4E00;&#x4E9B;&#x4FDD;&#x62A4;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9AD8;&#x5EA6;&#x5065;&#x58EE;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x91CD;&#x8BD5;&#x7531;&#x4E8E;&#x6682;&#x65F6;&#x7CFB;&#x7EDF;&#x6545;&#x969C;&#x800C;&#x5931;&#x8D25;&#x7684;&#x670D;&#x52A1;&#x8BF7;&#x6C42;&#x3002;&#x6700;&#x597D;&#x4F7F;&#x7528;&#x961F;&#x5217;&#x6765;&#x4FDD;&#x8BC1;&#x670D;&#x52A1;&#x8D28;&#x91CF;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5C06;&#x5BA2;&#x6237;&#x7AEF;&#x76F4;&#x63A5;&#x66B4;&#x9732;&#x4E8E;&#x95F4;&#x6B47;&#x6027;&#x7684;&#x670D;&#x52A1;&#x4E2D;&#x65AD;&#x4E2D;&#xFF0C;&#x8FD9;&#x9700;&#x8981;&#x590D;&#x6742;&#x4E14;&#x7ECF;&#x5E38;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x961F;&#x5217;&#x5728;&#x7BA1;&#x7406;&#x5927;&#x578B;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E2D;&#x4E0D;&#x540C;&#x90E8;&#x5206;&#x4E4B;&#x95F4;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x901A;&#x4FE1;&#x4E2D;&#x626E;&#x6F14;&#x7740;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x7684;&#x89D2;&#x8272;&#x3002;&#x6709;&#x5F88;&#x591A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5B83;&#x4EEC;&#xFF0C;&#x4E5F;&#x6709;&#x5F88;&#x591A;&#x5F00;&#x6E90;&#x7684;&#x961F;&#x5217;&#x5B9E;&#x73B0;&#xFF0C;&#x6BD4;&#x5982;RabbitMQ&#x3001;ZeroMQ&#x3001;ActiveMQ&#x548C;BeanstalkD&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="代理.html" class="navigation navigation-prev " aria-label="Previous page: 代理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="冗余与复制.html" class="navigation navigation-next " aria-label="Next page: 冗余与复制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"队列","level":"1.7","depth":1,"next":{"title":"冗余与复制","level":"1.8","depth":1,"path":"冗余与复制.md","ref":"冗余与复制.md","articles":[]},"previous":{"title":"代理","level":"1.6","depth":1,"path":"代理.md","ref":"代理.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"队列.md","mtime":"2022-04-08T03:52:40.496Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-08T07:03:40.449Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
