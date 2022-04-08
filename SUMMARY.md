@@ -2,9 +2,6 @@
 
 * [前言](README.md)
 * [负载均衡](负载均衡.md)
-    * [智能客户端](负载均衡.md#智能客户端)
-    * [硬件负载均衡器](负载均衡.md#硬件负载均衡器)
-    * [软件负载均衡](负载均衡.md#软件负载均衡)
 * [缓存](缓存.md)
 * [分片或数据分区](分片或数据分区.md)
 * [索引](索引.md)
@@ -19,6 +16,7 @@
 * [设计像TinyURL这样的短URL服务](设计像TinyURL这样的短URL服务.md)
 * [设计Instagram](设计Instagram.md)
 * [设计Dropbox](设计Dropbox.md)
+* [设计Typeahead](设计Typeahead.md)  
 * [设计FackbookMessager](设计FackbookMessager.md)
 * [设计Twitter](设计Twitter.md)
 * [设计Youtube或Netflix](设计Youtube或Netflix.md)
